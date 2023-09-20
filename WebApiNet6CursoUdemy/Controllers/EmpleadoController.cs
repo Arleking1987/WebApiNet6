@@ -9,8 +9,8 @@ namespace WebApiNet6CursoUdemy.Controllers
     [ApiController]
     public class EmpleadoController : ControllerBase
     {
-        private readonly IServicioEmpleado _servicioEmpleado;
-        public EmpleadoController(IServicioEmpleado servicioEmpleado)
+        private readonly IServicioEmpleadoSQL _servicioEmpleado;
+        public EmpleadoController(IServicioEmpleadoSQL servicioEmpleado)
         {
             _servicioEmpleado = servicioEmpleado;
         }
@@ -40,7 +40,7 @@ namespace WebApiNet6CursoUdemy.Controllers
         {
             Empleado empleado = new Empleado
             {
-                Id = _servicioEmpleado.DameEmpleados().Max(x=>x.Id) + 1,
+                
                 CodEmpleado = empleadoDTO.CodEmpleado,
                 Nombre = empleadoDTO.Nombre,
                 Email = empleadoDTO.Email,
