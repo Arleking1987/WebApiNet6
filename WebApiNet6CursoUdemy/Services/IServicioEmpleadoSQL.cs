@@ -2,13 +2,13 @@
 {
     public interface IServicioEmpleadoSQL
     {
-        public IEnumerable<Empleado> DameEmpleados();
+        public Task<IEnumerable<Empleado>> DameEmpleados();
 
-        public Empleado DameEmpleado(string codEmpleado);
-        public void NuevoEmpleado(Empleado empleado);
+        public Task<Empleado> DameEmpleado(string codEmpleado);
+        public Task NuevoEmpleado(Empleado empleado);
 
-        public void ModificarEmpleado(Empleado empleado);
+        public Task ModificarEmpleado(Empleado empleado);
 
-        public void BajaEmpleado(string codEmpleado);
+        public Task BajaEmpleado(string codEmpleado);
     }
 }

@@ -18,27 +18,118 @@ namespace WebApiNet6CursoUdemy.Services
             return new SqlConnection(_cadenaConexionSql);
         }
 
-        public void BajaEmpleado(string codEmpleado)
+        public async Task BajaEmpleado(string codEmpleado)
         {
-            throw new NotImplementedException();
+            SqlConnection sqlConexion = conexion();
+          
+
+            try
+            {
+                sqlConexion.Open();
+                var param = new DynamicParameters();
+
+                param.Add("@CodEmpleado", codEmpleado, DbType.String, ParameterDirection.Input, 4);
+                await sqlConexion.ExecuteScalarAsync("EmpleadoBorrar", param, commandType: CommandType.StoredProcedure);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Se produjo un error al borrar un empleado " + ex.Message);
+            }
+            finally
+            {
+                sqlConexion.Close();
+                sqlConexion.Dispose();
+            }
         }
 
-        public Empleado DameEmpleado(string codEmpleado)
+        public async Task<Empleado> DameEmpleado(string codEmpleado)
         {
-            throw new NotImplementedException();
+            SqlConnection sqlConexion = conexion();
+            Empleado empleado = null;
+
+            try
+            {
+                sqlConexion.Open();
+                var param = new DynamicParameters();
+              
+                param.Add("@CodEmpleado", codEmpleado, DbType.String, ParameterDirection.Input, 4);
+                empleado = await sqlConexion.QueryFirstOrDefaultAsync<Empleado>("EmpleadoObtener", param, commandType: CommandType.StoredProcedure);
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Se produjo un error al obtener un empleado " + ex.Message);
+            }
+            finally
+            {
+                sqlConexion.Close();
+                sqlConexion.Dispose();
+            }
+
+            return empleado; 
         }
 
-        public IEnumerable<Empleado> DameEmpleados()
+        public async Task<IEnumerable<Empleado>> DameEmpleados()
         {
-            throw new NotImplementedException();
+            SqlConnection sqlConexion = conexion();
+            List <Empleado> empleados = new List<Empleado>();
+
+            try
+            {
+                sqlConexion.Open();
+                
+                var resultado = await sqlConexion.QueryAsync<Empleado>("EmpleadoObtener", commandType: CommandType.StoredProcedure);
+                empleados = resultado.ToList();
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Se produjo un error al obtener los empleados " + ex.Message);
+            }
+            finally
+            {
+                sqlConexion.Close();
+                sqlConexion.Dispose();
+            }
+
+            return empleados;
         }
 
-        public void ModificarEmpleado(Empleado empleado)
+        public async Task ModificarEmpleado(Empleado empleado)
         {
-            throw new NotImplementedException();
+            SqlConnection sqlConexion = conexion();
+
+            try
+            {
+                sqlConexion.Open();
+                var param = new DynamicParameters();
+                param.Add("@Nombre", empleado.Nombre, DbType.String, ParameterDirection.Input, 500);
+                param.Add("@CodEmpleado", empleado.CodEmpleado, DbType.String, ParameterDirection.Input, 4);
+                param.Add("@Email", empleado.Email, DbType.String, ParameterDirection.Input, 225);
+                param.Add("@Edad", empleado.Edad, DbType.Int32, ParameterDirection.Input);
+                await sqlConexion.ExecuteScalarAsync("EmpleadoModificar", param, commandType: CommandType.StoredProcedure);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Se produjo un error al modificar empleado " + ex.Message);
+            }
+            finally
+            {
+                sqlConexion.Close();
+                sqlConexion.Dispose();
+            }
         }
 
-        public void NuevoEmpleado(Empleado empleado)
+        public async Task NuevoEmpleado(Empleado empleado)
         {
             SqlConnection sqlConexion = conexion();
 
@@ -51,7 +142,7 @@ namespace WebApiNet6CursoUdemy.Services
                 param.Add("@Email", empleado.Email, DbType.String, ParameterDirection.Input, 225);
                 param.Add("@Edad", empleado.Edad, DbType.Int32, ParameterDirection.Input);
                 param.Add("@FechaAlta", empleado.FechaAlta, DbType.DateTime, ParameterDirection.Input);
-                sqlConexion.ExecuteScalar("EmpleadoAlta", param, commandType: CommandType.StoredProcedure);
+                await sqlConexion.ExecuteScalarAsync("EmpleadoAlta", param, commandType: CommandType.StoredProcedure);
 
             }
             catch (Exception ex)

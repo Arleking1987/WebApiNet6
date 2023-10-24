@@ -16,27 +16,27 @@ namespace WebApiNet6CursoUdemy.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<EmpleadoDTO> DameEmpleados()
+        public async Task<IEnumerable<EmpleadoDTO>> DameEmpleados()
         {
             //Utilizamos LINQ por medio de "Select" para utilizar el metodo de convertir deteo para mapear el objeto Empleado a EmpleadoDTO y arrojar los resultados
             //Como una lista de EmpleadoDTO y no de Empleado
-            IEnumerable<EmpleadoDTO> listaEmpleados = _servicioEmpleado.DameEmpleados().Select(empleado => empleado.convertirDTO());
+            var listaEmpleados = (await _servicioEmpleado.DameEmpleados()).Select(empleado => empleado.convertirDTO());
             return listaEmpleados;
         }
 
         [HttpGet("{codEmpleado}")]
-        public ActionResult<EmpleadoDTO> DameEmpleado(string codEmpleado)
+        public async Task<ActionResult<EmpleadoDTO>> DameEmpleado(string codEmpleado)
         {
-            EmpleadoDTO empleado = _servicioEmpleado.DameEmpleado(codEmpleado).convertirDTO();
+            EmpleadoDTO empleado = (await _servicioEmpleado.DameEmpleado(codEmpleado)).convertirDTO();
             if(empleado is null)
             {
-                return NotFound(empleado);
+                return NotFound("Empleado no encontrado para el código solicitado");
             }
             return empleado;
         }
 
         [HttpPost]
-        public ActionResult<EmpleadoDTO> NuevoEmpleado(EmpleadoDTO empleadoDTO)
+        public async Task<ActionResult<EmpleadoDTO>> NuevoEmpleado(EmpleadoDTO empleadoDTO)
         {
             Empleado empleado = new Empleado
             {
@@ -48,18 +48,18 @@ namespace WebApiNet6CursoUdemy.Controllers
                 FechaAlta = DateTime.Now
             };
 
-            _servicioEmpleado.NuevoEmpleado(empleado);
+           await _servicioEmpleado.NuevoEmpleado(empleado);
             return empleado.convertirDTO();
         }
 
         [HttpPut]
-        public ActionResult<EmpleadoDTO> ModificarEmpleado(EmpleadoDTO empleado)
+        public async Task<ActionResult<EmpleadoDTO>> ModificarEmpleado(EmpleadoDTO empleado)
         {
-            Empleado empleadoAux = _servicioEmpleado.DameEmpleado(empleado.CodEmpleado);
+            Empleado empleadoAux = await _servicioEmpleado.DameEmpleado(empleado.CodEmpleado);
 
             if (empleadoAux is null)
             {
-                return NotFound();
+                return NotFound("Empleado no encontrado para el código solicitado");
             }
 
             empleadoAux.CodEmpleado = empleado.CodEmpleado;
@@ -67,21 +67,21 @@ namespace WebApiNet6CursoUdemy.Controllers
             empleadoAux.Email = empleado.Email;
             empleadoAux.Edad = empleado.Edad;
 
-            _servicioEmpleado.ModificarEmpleado(empleadoAux);
+           await _servicioEmpleado.ModificarEmpleado(empleadoAux);
             return empleado;
         }
 
         [HttpDelete]
-        public ActionResult BorrarEmpleado(string codEmpleado)
+        public async Task<ActionResult> BorrarEmpleado(string codEmpleado)
         {
-            Empleado empleadoAux = _servicioEmpleado.DameEmpleado(codEmpleado);
+            Empleado empleadoAux = await _servicioEmpleado.DameEmpleado(codEmpleado);
 
             if (empleadoAux is null)
             {
                 return NotFound();
             }
 
-            _servicioEmpleado.BajaEmpleado(codEmpleado);
+           await _servicioEmpleado.BajaEmpleado(codEmpleado);
 
             return Ok();
         }

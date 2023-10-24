@@ -25,3 +25,42 @@ F:\Desarrollo\WebApiNet6CursoUdemy\WebApiNet6CursoUdemy\obj\Debug\net6.0\refint\
 F:\Desarrollo\WebApiNet6CursoUdemy\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.pdb
 F:\Desarrollo\WebApiNet6CursoUdemy\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.genruntimeconfig.cache
 F:\Desarrollo\WebApiNet6CursoUdemy\WebApiNet6CursoUdemy\obj\Debug\net6.0\ref\WebApiNet6CursoUdemy.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\appsettings.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\WebApiNet6CursoUdemy.exe
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\WebApiNet6CursoUdemy.deps.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\WebApiNet6CursoUdemy.runtimeconfig.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\WebApiNet6CursoUdemy.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\WebApiNet6CursoUdemy.pdb
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Dapper.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.csproj.AssemblyReference.cache
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.AssemblyInfoInputs.cache
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.AssemblyInfo.cs
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.csproj.CoreCompileInputs.cache
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets\msbuild.WebApiNet6CursoUdemy.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApiNet6CursoUdemy.props
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApiNet6CursoUdemy.props
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApiNet6CursoUdemy.props
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\scopedcss\bundle\WebApiNet6CursoUdemy.styles.css
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.csproj.CopyComplete
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\refint\WebApiNet6CursoUdemy.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.pdb
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.genruntimeconfig.cache
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\ref\WebApiNet6CursoUdemy.dll

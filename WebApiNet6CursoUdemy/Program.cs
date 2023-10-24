@@ -1,7 +1,6 @@
-
-
 using WebApiNet6CursoUdemy;
 using WebApiNet6CursoUdemy.Services;
+using NLog.Extensions.Logging;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration Configuration;
@@ -23,6 +22,12 @@ builder.Services.AddSwaggerGen();
 //AddSingleton: Los objetos creados por Singleton son iguales en todas partes en todas las sesiones de solicitud.
 builder.Services.AddScoped<IServicioEmpleado, ServicioEmpleado>();
 builder.Services.AddScoped<IServicioEmpleadoSQL, ServicioEmpleadoSQL>();
+
+//De esta forma agregamos la libreria NLog para ser usado desde la aplicación para hacer la inyección de dependencias
+builder.Host.ConfigureLogging((hostingContext, loggin) =>
+{
+    loggin.AddNLog();
+});
 
 var app = builder.Build();
 
