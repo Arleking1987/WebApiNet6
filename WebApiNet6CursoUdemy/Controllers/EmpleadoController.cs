@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using WebApiNet6CursoUdemy.DTO;
 using WebApiNet6CursoUdemy.Services;
@@ -7,6 +9,7 @@ namespace WebApiNet6CursoUdemy.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class EmpleadoController : ControllerBase
     {
         private readonly IServicioEmpleadoSQL _servicioEmpleado;
@@ -16,6 +19,7 @@ namespace WebApiNet6CursoUdemy.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IEnumerable<EmpleadoDTO>> DameEmpleados()
         {
             //Utilizamos LINQ por medio de "Select" para utilizar el metodo de convertir deteo para mapear el objeto Empleado a EmpleadoDTO y arrojar los resultados
@@ -25,6 +29,7 @@ namespace WebApiNet6CursoUdemy.Controllers
         }
 
         [HttpGet("{codEmpleado}")]
+        [Authorize]
         public async Task<ActionResult<EmpleadoDTO>> DameEmpleado(string codEmpleado)
         {
             EmpleadoDTO empleado = (await _servicioEmpleado.DameEmpleado(codEmpleado)).convertirDTO();
@@ -36,6 +41,7 @@ namespace WebApiNet6CursoUdemy.Controllers
         }
 
         [HttpPost]
+        [Authorize]
         public async Task<ActionResult<EmpleadoDTO>> NuevoEmpleado(EmpleadoDTO empleadoDTO)
         {
             Empleado empleado = new Empleado
@@ -53,6 +59,7 @@ namespace WebApiNet6CursoUdemy.Controllers
         }
 
         [HttpPut]
+        [Authorize]
         public async Task<ActionResult<EmpleadoDTO>> ModificarEmpleado(EmpleadoDTO empleado)
         {
             Empleado empleadoAux = await _servicioEmpleado.DameEmpleado(empleado.CodEmpleado);
@@ -72,6 +79,7 @@ namespace WebApiNet6CursoUdemy.Controllers
         }
 
         [HttpDelete]
+        [Authorize]
         public async Task<ActionResult> BorrarEmpleado(string codEmpleado)
         {
             Empleado empleadoAux = await _servicioEmpleado.DameEmpleado(codEmpleado);

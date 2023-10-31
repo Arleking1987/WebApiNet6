@@ -1,6 +1,9 @@
 using WebApiNet6CursoUdemy;
 using WebApiNet6CursoUdemy.Services;
 using NLog.Extensions.Logging;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 IConfiguration Configuration;
@@ -11,7 +14,25 @@ var config = builder.Configuration;
 var cadenaConexionSql = new ConexionBaseDatos(config.GetConnectionString("SQL"));
 builder.Services.AddSingleton(cadenaConexionSql); //Con esto nos asegurmos en tener la cadena en todo el ambito de la aplicacion
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+
+    options.TokenValidationParameters = new TokenValidationParameters()
+    {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = config["JWT:Issuer"],
+        ValidAudience = config["JWT:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JWT:ClaveSecreta"]))
+    };
+
+});
+
 builder.Services.AddControllers();
+builder.Services.AddAuthorization();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -22,6 +43,7 @@ builder.Services.AddSwaggerGen();
 //AddSingleton: Los objetos creados por Singleton son iguales en todas partes en todas las sesiones de solicitud.
 builder.Services.AddScoped<IServicioEmpleado, ServicioEmpleado>();
 builder.Services.AddScoped<IServicioEmpleadoSQL, ServicioEmpleadoSQL>();
+builder.Services.AddScoped<IServicioUsuarioAPI, ServicioUsuarioAPI>();
 
 //De esta forma agregamos la libreria NLog para ser usado desde la aplicación para hacer la inyección de dependencias
 builder.Host.ConfigureLogging((hostingContext, loggin) =>
@@ -39,7 +61,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

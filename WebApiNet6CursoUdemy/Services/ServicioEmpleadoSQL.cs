@@ -7,10 +7,12 @@ namespace WebApiNet6CursoUdemy.Services
     public class ServicioEmpleadoSQL : IServicioEmpleadoSQL
     {
         private string _cadenaConexionSql;
+        private readonly ILogger<ServicioEmpleadoSQL> _logger;
 
-        public ServicioEmpleadoSQL(ConexionBaseDatos cadenaConexionSql)
+        public ServicioEmpleadoSQL(ConexionBaseDatos cadenaConexionSql, ILogger<ServicioEmpleadoSQL> logger)
         {
             _cadenaConexionSql = cadenaConexionSql.CadenaConexionSQL;
+            _logger = logger;
         }
 
         private SqlConnection conexion()
@@ -35,7 +37,7 @@ namespace WebApiNet6CursoUdemy.Services
             }
             catch (Exception ex)
             {
-
+                _logger.LogError("ERROR: " + ex.ToString());
                 throw new Exception("Se produjo un error al borrar un empleado " + ex.Message);
             }
             finally
@@ -62,7 +64,7 @@ namespace WebApiNet6CursoUdemy.Services
             }
             catch (Exception ex)
             {
-
+                _logger.LogError("ERROR: " + ex.ToString());
                 throw new Exception("Se produjo un error al obtener un empleado " + ex.Message);
             }
             finally
@@ -90,7 +92,7 @@ namespace WebApiNet6CursoUdemy.Services
             }
             catch (Exception ex)
             {
-
+                _logger.LogError("ERROR: " + ex.ToString());
                 throw new Exception("Se produjo un error al obtener los empleados " + ex.Message);
             }
             finally
@@ -119,7 +121,7 @@ namespace WebApiNet6CursoUdemy.Services
             }
             catch (Exception ex)
             {
-
+                _logger.LogError("ERROR: " + ex.ToString());
                 throw new Exception("Se produjo un error al modificar empleado " + ex.Message);
             }
             finally
@@ -147,7 +149,7 @@ namespace WebApiNet6CursoUdemy.Services
             }
             catch (Exception ex)
             {
-
+                _logger.LogError("ERROR: " + ex.ToString());
                 throw new Exception("Se produjo un error al dar de alta " + ex.Message);
             }
             finally

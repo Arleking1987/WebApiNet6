@@ -21,5 +21,19 @@ namespace WebApiNet6CursoUdemy
 
             return null;
         }
+
+        public static UsuarioApiDTO convertirDTO(this UsuarioAPI usuario)
+        {
+            if (usuario != null)
+            {
+                return new UsuarioApiDTO
+                {
+                    Token = usuario.Token,
+                    Usuario= usuario.Usuario
+                };
+            }
+
+            return null;
+        }
     }
 }

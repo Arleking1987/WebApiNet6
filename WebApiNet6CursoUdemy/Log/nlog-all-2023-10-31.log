@@ -1,0 +1,33 @@
+2023-10-31 16:30:41.9956|ERROR|WebApiNet6CursoUdemy.Services.ServicioUsuarioAPI|ERROR: System.Data.SqlClient.SqlException (0x80131904): Credenciales no válidas
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.Tasks.Task.<>c.<.cctor>b__272_0(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 474
+   at WebApiNet6CursoUdemy.Services.ServicioUsuarioAPI.DameUsuario(LoginAPI login) in C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\Services\ServicioUsuarioAPI.cs:line 33
+ClientConnectionId:00133365-ae90-47e7-8c9b-9c021c7a86ba
+Error Number:50000,State:1,Class:16
+2023-10-31 16:30:42.1285|ERROR|Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware|An unhandled exception has occurred while executing the request.|System.Exception: Se produjo un error al obtener datos del usuario de login Credenciales no válidas
+   at WebApiNet6CursoUdemy.Services.ServicioUsuarioAPI.DameUsuario(LoginAPI login) in C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\Services\ServicioUsuarioAPI.cs:line 40
+   at WebApiNet6CursoUdemy.Controllers.LoginAPIController.AutenticarUsuarioAsync(LoginAPI usuarioLogin) in C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\Controllers\LoginAPIController.cs:line 42
+   at WebApiNet6CursoUdemy.Controllers.LoginAPIController.Login(LoginAPI usuarioLogin) in C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\Controllers\LoginAPIController.cs:line 28
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)

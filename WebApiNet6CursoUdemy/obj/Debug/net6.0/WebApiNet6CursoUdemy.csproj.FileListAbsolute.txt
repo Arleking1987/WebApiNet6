@@ -64,3 +64,13 @@ C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacio
 C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.pdb
 C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\WebApiNet6CursoUdemy.genruntimeconfig.cache
 C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\obj\Debug\net6.0\ref\WebApiNet6CursoUdemy.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\nlog.config
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\NLog.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\yonhatan.ramirez\OneDrive - SoftwareONE\Documents\ejerciciosProgramacion\WebApiNet6\WebApiNet6CursoUdemy\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
